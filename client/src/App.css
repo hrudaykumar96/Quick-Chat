@@ -1,0 +1,335 @@
+/* login form */
+
+.authentication-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(71, 130, 172);
+    overflow: auto;
+}
+.authentication-form form{
+    width: 30rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #f0f0f0; 
+}
+.authentication-form form img{
+    height: 200px;
+    width: 100%;
+    mix-blend-mode:darken;
+}
+
+/* invalid page */
+.invalid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f0f0f0; 
+}
+.invalid img{
+    width: 300px;
+    height: 250px;
+    object-fit: fill;
+    image-rendering: pixelated;
+    mix-blend-mode:darken;
+}
+
+/* loading spinner */
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+    height: 60px;
+}
+.navbar span{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navbar .left{
+    color: #6dc1e8;
+}
+.navbar .right{
+    color: #f29e50;
+}
+@media(max-width:991.5px){
+    .navbar{
+        height: auto;
+    }
+}
+
+/* sidebar */
+.offcanvas{
+    position: fixed;
+    background-color: #f0f2f5;
+    width: 30% !important;
+    top: 60px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    overflow: auto;
+}
+.offcanvas ::-webkit-scrollbar{
+    width: 12px;
+}
+.offcanvas .btn-close{
+    display: none;
+}
+.offcanvas img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    image-rendering: pixelated;
+    object-fit: fill;
+}
+.offcanvas-body{
+    padding: 0;
+}
+.offcanvas ul li a img{
+    height: 50px;
+    width: 60px;
+    border-radius: 50%;
+}
+.offcanvas ul .active{
+    background-color: #ece5dd;
+    border: 1px solid #6dc1e8;
+}
+.offcanvas ul li:hover{
+    background-color: #c8c9cb;
+    border: 1px solid #6dc1e8;
+}
+@media(max-width:991.5px){
+    .offcanvas{
+        width: 100% !important;
+    }
+    .offcanvas .btn-close{
+        display: block;
+    }
+}
+/* messages section */
+.messages{
+    background-color: #ece5dd;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 50px;
+    overflow: auto;
+    width: 70%;
+}
+.messages .message-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.messages .message-group .date{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.message-group .date small{
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.messages::-webkit-scrollbar {
+    width: 12px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px; 
+}
+.messages p{
+    text-align: justify;
+    text-transform: none;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+}
+.messages .empty-data img{
+    mix-blend-mode: darken;
+    height: 70vh;
+    width: 100%;
+}
+.messages .receiver{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 50%;
+    align-self: flex-start;
+    clear: both;
+    margin-bottom: 1rem;
+}
+.messages .sender{
+    background-color: #dcf8c6;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 50%;
+    align-self: flex-end;
+    clear: both;
+    margin-bottom: 1rem;
+}
+.messages .input-group{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    background-color: #ece5dd;
+}
+.messages input{
+    height: 50px;
+    text-transform: none;
+}
+.messages .nav img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    image-rendering: pixelated;
+    object-fit: fill;
+}
+@media(max-width:991.5px){
+    .messages{
+        width: 100%;    
+    }
+    .messages .input-group{
+        width: 100%;
+    }
+}
+@media(max-width:650px){
+    .messages .receiver{
+        width: 70%;
+    }
+    .messages .sender{
+        width: 70%;
+    }
+}
+@media(max-width:400px){
+    .messages .receiver{
+        width: 90%;
+    }
+    .messages .sender{
+        width: 90%;
+    }
+}
+
+/* change password form */
+.pwd-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 5000;
+}
+.pwd-form form{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    width: 30rem;
+    max-width: 100%;
+}
+
+/* new chat form */
+.pwd-form form img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.pwd-form form img:hover{
+    transform:  scale(2);
+    border-radius: 0;
+    transition: all .5s;
+    image-rendering: pixelated;
+    object-fit: fill;
+}
+
+/* profile */
+.profile-section{
+    background-color: rgb(217, 217, 217);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.profile-section .pic img, .profile-section img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    image-rendering: pixelated;
+    object-fit: fill;
+    margin-top: 5rem;
+}
+.profile-section .pic img:hover, .profile-section img:hover{
+    border-radius: 0;
+    transition: all .5s;
+}
+.profile-section .info{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.profile-section .email{
+    text-transform: none;
+}
+.profile-section .blocked-section ul{
+    max-width: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.profile-section .blocked-section li{
+    margin-bottom: 1rem;
+}
+.profile-section .blocked-section img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 1rem;
+}
